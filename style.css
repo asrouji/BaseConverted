@@ -1,17 +1,16 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: rgb(255, 214, 255);
-  font-family: serif;
+  background: lightgrey;
+  font-family: Arial;
   font-size: 130%;
 }
 
 h1 {
   color: white;
-  background: linear-gradient(90deg, rgb(217, 134, 255) 0%, rgb(255, 141, 245) 100%);
-  text-shadow: 1px 1px 4px black;
+  background: linear-gradient(90deg, rgb(43, 43, 43) 0%, rgb(29, 29, 29) 100%);
   text-align: center;
-  padding: 30px;
+  padding: 25px;
 }
 
 p {
@@ -19,16 +18,7 @@ p {
   font-size: 100%;
 }
 
-span#days {
-  font-weight: bold;
-}
-
-input[type=date]#date1:hover {
-  background-color: #f1d4ff;
-  transition: background-color 0.1s linear;
-}
-
-input[type=date]#date2:hover {
-  background-color: #f1d4ff;
-  transition: background-color 0.1s linear;
+.input-element{
+  height: 200px;
+  width: 400px;
 }

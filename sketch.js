@@ -1,26 +1,15 @@
-const date1box = document.querySelector('#date1');
-const date2box = document.querySelector('#date2');
-const daySpan = document.querySelector(`#days`);
+const base10input = document.querySelector('#base10input');
+const base16input = document.querySelector('#base16input');
 
-date1box.value = '2020-09-28';
-date2box.value = '2020-09-30';
-let date1 = new Date(date1box.value);
-let date2 = new Date(date2box.value);
-computeDays();
+base10input.addEventListener('input', () => {
+    const base10num = parseFloat(base10input.value);
+    const base16num = base10num.toString(16);
+    base16input.value = base16num;
+})
 
-date1box.addEventListener('input', () => {
-    date1 = new Date(date1box.value);
-    console.log(date1);
-    computeDays();
-});
+base16input.addEventListener('input', () => {
+    const base16num = parseInt(base16input.value, 16);
+    const base10num = base16num;
+    base10input.value = base10num;
+})
 
-date2box.addEventListener('input', () => {
-    date2 = new Date(date2box.value);
-    console.log(date2);
-    computeDays();
-});
-
-function computeDays() {
-    let days = Math.abs((date2-date1)/1000/60/60/24);
-    daySpan.textContent = days;
-}
